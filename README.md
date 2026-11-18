@@ -174,7 +174,7 @@ git remote add origin https://gitee.com/<你的用户名>/dsh-session-artifact-f
 git push -u origin master
 ```
 
-上传前把 `package.json` 里三处 `CHANGE_ME` 换成你的 Gitee 用户名（`repository` / `homepage` / `bugs`）。`settings.json` 已在 `.gitignore` 中，不会把本机路径带进仓库。
+上传前把 `package.json` 里的 `repository` / `homepage` / `bugs` 换成你自己的 Gitee 地址（本仓库当前指向 <https://gitee.com/liuyuefeilengxue/dsh-session-artifact-folders>）。`settings.json` 已在 `.gitignore` 中，不会把本机路径带进仓库；仓库只带 `settings.example.json`。
 
 ## License
 

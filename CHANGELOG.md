@@ -20,6 +20,7 @@
 - **默认 `workspaceRoots` 由写死的一台机器路径改为 `[]`**（空 = 所有工作目录），插件不再绑定作者机器。
 - 插件描述文案改为：「让每个会话的产物自动落进以会话标题命名的文件夹，会话之间互不混杂，整理和查找一目了然。」
 - `settings.json` 移入 `.gitignore`，仓库只带 `settings.example.json`（本机配置不进仓库）。
+- 署名与仓库地址：`LICENSE` 版权人与 `package.json` 的 `author` 为 **六月飞冷雪**，`repository` / `homepage` / `bugs` 指向 <https://gitee.com/liuyuefeilengxue/dsh-session-artifact-folders>。
 
 ### 修复
 
