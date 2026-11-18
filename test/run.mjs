@@ -9,15 +9,15 @@ import { apply, loadSettings, DEFAULTS } from '../index.js'
 
 // Fixture strings only — nothing is written; the loose-file scan is defensive and
 // tolerates a non-existent root.
-const ROOT = 'D:\\deepseek工作区\\工作'
+const ROOT = 'D:\\demo-workspace\\work'
 const sessions = new Map([
   ['s1', { id: 's1', title: '测试会话', root: ROOT }],
   ['s2', { id: 's2', title: null, root: ROOT }],
   ['s3', { id: 's3', title: '外部项目', root: 'C:\\Users\\someone\\proj' }],
 ])
 
-// The shipped config this machine runs with: only 工作区 is policed, deny is on.
-const LOCAL = { mode: 'deny', workspaceRoots: ['D:/deepseek工作区'] }
+// A typical local config: one workspace family is policed, deny is on.
+const LOCAL = { mode: 'deny', workspaceRoots: ['D:/demo-workspace'] }
 
 const sections = []
 const guards = []
@@ -84,8 +84,8 @@ assert.equal(guard('s1', 'write', { file_path: '新建说明.md' }), undefined, 
 assert.equal(guard('s1', 'write', { file_path: `${ROOT}\\AGENTS.md` }), undefined, 'AGENTS.md exempt')
 assert.equal(guard('s1', 'write', { file_path: `${ROOT}\\todo\\todo.mjs` }), undefined, 'legacy todo/ exempt')
 assert.equal(guard('s1', 'write', { file_path: 'C:\\Windows\\notepad.exe' }), undefined, 'outside family allowed')
-assert.equal(guard('s1', 'write', { file_path: 'D:\\deepseek工作区\\赚钱\\tools\\x.mjs' }), undefined, 'exempt legacy path in another workspace: allowed')
-assert.equal(guard('s1', 'write', { file_path: 'D:\\deepseek工作区\\杂项\\散文件.md' }), undefined, 'other workspace: note only, never deny')
+assert.equal(guard('s1', 'write', { file_path: 'D:\\demo-workspace\\money\\tools\\x.mjs' }), undefined, 'exempt legacy path in another workspace: allowed')
+assert.equal(guard('s1', 'write', { file_path: 'D:\\demo-workspace\\misc\\散文件.md' }), undefined, 'other workspace: note only, never deny')
 assert.equal(guard('s1', 'pwsh', { command: `node "${ROOT}\\todo\\todo.mjs" list` }), undefined, 'shell never denied')
 assert.equal(guard('s1', 'read', { file_path: `${ROOT}\\AGENTS.md` }), undefined, 'read not enforced')
 assert.equal(guard('s3', 'write', { file_path: 'C:\\Users\\someone\\proj\\a.md' }), undefined, 'foreign session untouched')
@@ -93,8 +93,8 @@ assert.equal(guard('s3', 'write', { file_path: 'C:\\Users\\someone\\proj\\a.md' 
 // --- violations reach the next prompt assembly -----------------------------
 const t1b = text('s1')
 assert.ok(t1b.includes('检测到的写死路径'), 'denied path is surfaced back to the model')
-assert.ok(t1b.includes('杂项'), 'cross-workspace sighting is recorded (not denied)')
-assert.ok(!t1b.includes('赚钱'), 'exempt legacy paths are never nagged about')
+assert.ok(t1b.includes('misc'), 'cross-workspace sighting is recorded (not denied)')
+assert.ok(!t1b.includes('money'), 'exempt legacy paths are never nagged about')
 
 // --- knobs ----------------------------------------------------------------
 assert.equal(loadSettings({ mode: 'warn' }).mode, 'warn')
