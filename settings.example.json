@@ -1,0 +1,14 @@
+{
+  "enabled": true,
+  "mode": "warn",
+  "shellMode": "warn",
+  "enforcedTools": ["write", "edit", "apply_patch", "present"],
+  "shellTools": ["bash", "pwsh", "exec"],
+  "workspaceRoots": [],
+  "exemptAbsolute": ["AGENTS.md", "/todo/", "/tools/", "/skills/", ".chrome-", ".edge-", "/.dsh/"],
+  "folderMaxLength": 40,
+  "looseScan": true,
+  "looseScanTtlMs": 20000,
+  "maxReportedViolations": 4,
+  "sectionName": "session-artifact-folders"
+}

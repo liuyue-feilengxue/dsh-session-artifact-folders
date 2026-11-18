@@ -1,0 +1,12 @@
+{
+  "meta": {
+    "title": "Session Artifact Folders",
+    "description": "Files a session creates land in a folder named after that session, so every session keeps its own outputs and the workspace stays easy to browse.",
+    "detail": "docs/DETAIL.md"
+  },
+  "session-artifact-folders": {
+    "title": "Session artifact folder convention",
+    "description": "Artifact folder = session title; new outputs use paths relative to the working directory.",
+    "guardDeny": "Artifact paths must be relative to the working directory, not hardcoded absolute paths."
+  }
+}

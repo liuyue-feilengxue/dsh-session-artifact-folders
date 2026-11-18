@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="112" fill="#FDFDFD"/>
+  <!-- folder -->
+  <path d="M96 176c0-17 14-31 31-31h84l30 38h144c17 0 31 14 31 31v34H96z" fill="#C9A227"/>
+  <path d="M96 226h320c18 0 32 14 32 32v122c0 18-14 32-32 32H96c-18 0-32-14-32-32V258c0-18 14-32 32-32z" fill="#E3B93C"/>
+  <!-- relative path: root dot + arrow into folder -->
+  <circle cx="150" cy="316" r="17" fill="#2F3437"/>
+  <path d="M176 316h74" stroke="#2F3437" stroke-width="13" stroke-linecap="round"/>
+  <path d="M238 296l30 20-30 20z" fill="#2F3437"/>
+  <!-- crossed-out absolute path -->
+  <rect x="132" y="352" width="150" height="20" rx="10" fill="#8C6D1F" opacity=".55"/>
+  <path d="M126 344l162 40" stroke="#B3261E" stroke-width="13" stroke-linecap="round"/>
+</svg>

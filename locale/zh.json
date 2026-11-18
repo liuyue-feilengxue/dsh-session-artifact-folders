@@ -1,0 +1,12 @@
+{
+  "meta": {
+    "title": "会话产物目录",
+    "description": "让每个会话的产物自动落进以会话标题命名的文件夹，会话之间互不混杂，整理和查找一目了然。",
+    "detail": "docs/DETAIL.md"
+  },
+  "session-artifact-folders": {
+    "title": "会话产物目录约定",
+    "description": "产物目录 = 会话标题；新产物只用相对当前工作目录的路径。",
+    "guardDeny": "产物不能写死绝对路径，请改用相对当前工作目录的路径。"
+  }
+}

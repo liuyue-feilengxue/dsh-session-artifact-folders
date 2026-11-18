@@ -1,0 +1,19 @@
+# 本地配置不进仓库（每台机器的工作区根不同）
+settings.json
+
+# 依赖
+node_modules/
+
+# 编辑器 / 系统
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 日志与临时产物
+*.log
+npm-debug.log*
+pnpm-debug.log*
+coverage/
+dist/

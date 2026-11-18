@@ -1,0 +1,57 @@
+{
+  "name": "dsh-session-artifact-folders",
+  "version": "1.1.0",
+  "description": "让每个会话的产物自动落进以会话标题命名的文件夹，会话之间互不混杂，整理和查找一目了然。",
+  "license": "MIT",
+  "author": "汤学希",
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "cordis",
+    "session",
+    "artifacts",
+    "workspace",
+    "file-organization"
+  ],
+  "icon": "icon.svg",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./rules": "./rules.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "rules.js",
+    "settings.example.json",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "docs",
+    "test",
+    "icon.svg",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node test/run.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitee.com/CHANGE_ME/dsh-session-artifact-folders.git"
+  },
+  "homepage": "https://gitee.com/CHANGE_ME/dsh-session-artifact-folders",
+  "bugs": {
+    "url": "https://gitee.com/CHANGE_ME/dsh-session-artifact-folders/issues"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

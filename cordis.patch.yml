@@ -1,0 +1,7 @@
+# Bundle patch layer. The row mounts the package main entry as a plain Cordis
+# plugin for the whole profile; `config: {}` means "use settings.json / built-in
+# defaults". Override values here per row to change behaviour without editing files.
+- insert:
+    - id: session-artifact-folders
+      name: 'dsh-session-artifact-folders'
+      config: {}
