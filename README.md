@@ -4,6 +4,13 @@
 
 DeepSeek Harness（DSH）插件 · 零依赖 · MIT
 
+[![Gitee star](https://gitee.com/liuyuefeilengxue/dsh-session-artifact-folders/badge/star.svg?theme=gvp)](https://gitee.com/liuyuefeilengxue/dsh-session-artifact-folders/stargazers)
+[![Gitee fork](https://gitee.com/liuyuefeilengxue/dsh-session-artifact-folders/badge/fork.svg?theme=gvp)](https://gitee.com/liuyuefeilengxue/dsh-session-artifact-folders/members)
+[![license](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![node](https://img.shields.io/badge/node-%3E%3D18-brightgreen)](https://nodejs.org)
+[![dependencies](https://img.shields.io/badge/dependencies-0-blue)](package.json)
+[![release](https://img.shields.io/badge/release-v1.1.1-orange)](https://gitee.com/liuyuefeilengxue/dsh-session-artifact-folders/releases)
+
 ---
 
 ## 解决的问题
@@ -92,7 +99,7 @@ cp settings.example.json settings.json
 
 | 输入（会话标题） | 输出（目录名） |
 | --- | --- |
-| `工作日热搜Top10与抖音宠物话题日报（微信推送） · 2026-11-10` | 原样保留（36 字，未超上限） |
+| `季度业务复盘与下季度规划评审材料（含附录） · 2026-11-10` | 原样保留（34 字，未超上限） |
 | `报告/最终版: v2` | `报告 最终版 v2`（`/`、`:` 转空格并折叠） |
 | `con` / `NUL` | `_con` / `_NUL`（Windows 保留设备名前缀 `_`） |
 | `...` / `   ` | 不建目录（没有可用字符） |
@@ -163,18 +170,6 @@ dsh-session-artifact-folders/
 ├── LICENSE
 └── README.md
 ```
-
-## 发布到 Gitee
-
-```bash
-git init
-git add .
-git commit -m "feat: session artifact folders for DeepSeek Harness"
-git remote add origin https://gitee.com/<你的用户名>/dsh-session-artifact-folders.git
-git push -u origin master
-```
-
-上传前把 `package.json` 里的 `repository` / `homepage` / `bugs` 换成你自己的 Gitee 地址（本仓库当前指向 <https://gitee.com/liuyuefeilengxue/dsh-session-artifact-folders>）。`settings.json` 已在 `.gitignore` 中，不会把本机路径带进仓库；仓库只带 `settings.example.json`。
 
 ## License
 

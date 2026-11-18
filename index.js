@@ -212,7 +212,7 @@ function guardFactory(ctx, settings, states) {
       reason:
         `[session-artifact-folders] 产物不能写死绝对路径。${relativeHint(first.abs, root, folder)}。` +
         (folder ? `本会话产物目录：\`${folder}/\`。` : '') +
-        '写死的绝对路径在目录改名或搬家后会全部失效（本工作区刚为此整理过一次）。' +
+        '写死的绝对路径在目录改名或搬家后会全部失效。' +
         `若这条路径属于历史接缝，请把它加入插件 settings.json 的 exemptAbsolute，或改用相对路径后重试。`,
     }
   }
